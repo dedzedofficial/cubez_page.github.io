@@ -1,42 +1,142 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CubeZ</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FISH HWB</title>
+<meta name="description" content="FISH HWB — content creators for YouTube, Twitch and several other corners of the internet, run by Ded &quot;Our Fish Overlord&quot; Zed.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>CubeZ</h1>
+<div class="particles" aria-hidden="true"></div>
 
-    <p class="subtitle">
-        CubeZ is an AI-powered creator toolkit designed to streamline content creation,
-        automation, and integrations with supported third-party platforms.
-    </p>
-
-    <div class="cards">
-
-        <a class="card" href="privacy.html">
-            <h2>Privacy Policy</h2>
-            <p>Learn how your information is collected, stored and used.</p>
-        </a>
-
-        <a class="card" href="terms.html">
-            <h2>Terms of Service</h2>
-            <p>Read the terms governing your use of CubeZ.</p>
-        </a>
-
-    </div>
-
-    <footer>
-        © 2026 CubeZ. All rights reserved.
-    </footer>
-
+<div class="depth-gauge" aria-hidden="true">
+  <div class="rail"><div class="marker"></div></div>
+  <span class="label">SURFACE &middot; 0M</span>
 </div>
 
+<header class="site-nav">
+  <div class="container">
+    <div class="wordmark">FISH <span>HWB</span></div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="dzofo.html">DZOFO</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== SURFACE : hero ===== -->
+  <section class="zone hero">
+    <div class="container">
+      <div class="eyebrow">Welcome to the fallen</div>
+      <h1>Content, dragged up<br>from the <em>deep end</em>.</h1>
+      <p class="tagline">FISH HWB is home to content creators making YouTube videos, VR worlds, and general chaos across the internet — led by Our Fish Overlord himself.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#live">Watch live</a>
+        <a class="btn btn-ghost" href="dzofo.html">Meet the founder</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TWILIGHT ZONE : founder + live embeds ===== -->
+  <section class="zone" id="live">
+    <div class="container">
+      <div class="eyebrow">Twilight zone</div>
+      <a href="dzofo.html" style="text-decoration:none;">
+        <div class="founder-card">
+          <div class="portrait">FOUNDER<br>PHOTO</div>
+          <div>
+            <h3>Ded &quot;Our Fish Overlord&quot; Zed</h3>
+            <div class="role">Founder</div>
+          </div>
+        </div>
+      </a>
+
+      <div class="embed-grid">
+        <div class="embed-card">
+          <div class="embed-head"><span>Twitch</span><span>dedzedoffishal</span></div>
+          <iframe
+            id="twitch-embed"
+            src=""
+            height="260"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="embed-card">
+          <div class="embed-head"><span>Discord</span><span>Join the reef</span></div>
+          <iframe
+            src="https://discord.com/widget?id=1186424320428363887&theme=dark"
+            height="260"
+            allowtransparency="true"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MIDNIGHT ZONE : latest uploads ===== -->
+  <section class="zone">
+    <div class="container">
+      <div class="eyebrow">Midnight zone</div>
+      <h2>Latest fishy content</h2>
+      <div class="card-grid">
+        <div class="content-card">
+          <div class="thumb">
+            <!--
+              Swap this iframe's src for your latest YouTube upload:
+              https://www.youtube.com/embed/VIDEO_ID
+            -->
+            <span>Latest YouTube upload goes here</span>
+          </div>
+          <div class="body">
+            <h4>Latest YouTube upload</h4>
+            <p>Replace this card with an embed of your newest video.</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <div class="thumb">
+            <!--
+              Swap this iframe's src for your latest Twitch clip:
+              https://clips.twitch.tv/embed?clip=CLIP_SLUG&parent=YOURDOMAIN
+            -->
+            <span>Latest Twitch clip goes here</span>
+          </div>
+          <div class="body">
+            <h4>Latest Twitch clip</h4>
+            <p>Replace this card with an embed of your newest clip.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== THE ABYSS : footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="copyright">All Images and Media &middot; &copy; FISH HWB &#8471; FISH HWB</div>
+    <div class="legal-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Twitch requires a "parent" param matching the embedding domain.
+  // Setting it from location.hostname means this works automatically
+  // once the site is published on GitHub Pages, without editing the HTML.
+  document.getElementById('twitch-embed').src =
+    'https://player.twitch.tv/?channel=dedzedoffishal&parent=' + window.location.hostname;
+</script>
 </body>
 </html>
-```
