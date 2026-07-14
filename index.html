@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FISH HWB</title>
 <meta name="description" content="FISH HWB — content creators for YouTube, Twitch and several other corners of the internet, run by Ded &quot;Our Fish Overlord&quot; Zed.">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -33,13 +33,18 @@
 
   <!-- ===== SURFACE : hero ===== -->
   <section class="zone hero">
-    <div class="container">
-      <div class="eyebrow">Welcome to the fallen</div>
-      <h1>Content, dragged up<br>from the <em>deep end</em>.</h1>
-      <p class="tagline">FISH HWB is home to content creators making YouTube videos, VR worlds, and general chaos across the internet — led by Our Fish Overlord himself.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#live">Watch live</a>
-        <a class="btn btn-ghost" href="dzofo.html">Meet the founder</a>
+    <div class="container" style="display:flex; align-items:center; gap:48px; flex-wrap:wrap;">
+      <div class="hero-copy">
+        <div class="eyebrow">Welcome to the fallen</div>
+        <h1>Content, dragged up<br>from the <em>deep end</em>.</h1>
+        <p class="tagline">FISH HWB is home to content creators making YouTube videos, VR worlds, and general chaos across the internet — led by Our Fish Overlord himself.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#live">Watch live</a>
+          <a class="btn btn-ghost" href="dzofo.html">Meet the founder</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/images/hero-bg.jpeg" alt="Our Fish Overlord in VR headset, FISH HWB hoodie">
       </div>
     </div>
   </section>
@@ -50,7 +55,7 @@
       <div class="eyebrow">Twilight zone</div>
       <a href="dzofo.html" style="text-decoration:none;">
         <div class="founder-card">
-          <div class="portrait">FOUNDER<br>PHOTO</div>
+          <div class="portrait"><img src="assets/images/founder-portrait.png" alt="Our Fish Overlord"></div>
           <div>
             <h3>Ded &quot;Our Fish Overlord&quot; Zed</h3>
             <div class="role">Founder</div>
@@ -86,33 +91,28 @@
     <div class="container">
       <div class="eyebrow">Midnight zone</div>
       <h2>Latest fishy content</h2>
-      <div class="card-grid">
-        <div class="content-card">
-          <div class="thumb">
-            <!--
-              Swap this iframe's src for your latest YouTube upload:
-              https://www.youtube.com/embed/VIDEO_ID
-            -->
-            <span>Latest YouTube upload goes here</span>
-          </div>
-          <div class="body">
-            <h4>Latest YouTube upload</h4>
-            <p>Replace this card with an embed of your newest video.</p>
-          </div>
+      <div class="content-card" style="max-width:640px; margin-top:28px;">
+        <div class="thumb">
+          <iframe id="latest-video" width="100%" height="100%" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
         </div>
-        <div class="content-card">
-          <div class="thumb">
-            <!--
-              Swap this iframe's src for your latest Twitch clip:
-              https://clips.twitch.tv/embed?clip=CLIP_SLUG&parent=YOURDOMAIN
-            -->
-            <span>Latest Twitch clip goes here</span>
-          </div>
-          <div class="body">
-            <h4>Latest Twitch clip</h4>
-            <p>Replace this card with an embed of your newest clip.</p>
-          </div>
+        <div class="body">
+          <h4>Latest YouTube upload</h4>
+          <p>Auto-pulled from the FISH HWB channel.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRENCH ZONE : music ===== -->
+  <section class="zone">
+    <div class="container">
+      <div class="eyebrow">Trench zone</div>
+      <h2>Music from the deep</h2>
+      <div class="music-grid">
+        <iframe style="border-radius:4px" src="https://open.spotify.com/embed/artist/3G5lgBc7shS09fLh4ovfL4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:4px" src="https://open.spotify.com/embed/artist/61lcq8xxIfd0iLITBnjdtI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -137,6 +137,19 @@
   // once the site is published on GitHub Pages, without editing the HTML.
   document.getElementById('twitch-embed').src =
     'https://player.twitch.tv/?channel=dedzedoffishal&parent=' + window.location.hostname;
+</script>
+<script>
+  // Pulls the channel's most recent upload via RSS2JSON and swaps it into the embed.
+  const channelID = "UCtcFAWZJeiEp_DOKy8U_YYg";
+  const feedURL = `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
+
+  fetch(feedURL)
+    .then(response => response.json())
+    .then(data => {
+      const videoID = data.items[0].link.split("v=")[1];
+      document.getElementById('latest-video').src = `https://www.youtube.com/embed/${videoID}`;
+    })
+    .catch(error => console.error("Error loading latest video:", error));
 </script>
 </body>
 </html>
