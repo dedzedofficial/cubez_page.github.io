@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DZOFO — FISH HWB</title>
 <meta name="description" content="You've discovered my sunken treasure. Dragged up from the ocean floor — meet Our Fish Overlord, aka Ded Zed.">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -31,8 +31,9 @@
 
 <main>
 
-  <section class="zone">
-    <div class="container about-hero">
+  <section class="zone" style="overflow:hidden;">
+    <div class="glow-orb glow-orb--teal" aria-hidden="true"></div>
+    <div class="container about-hero reveal">
       <div class="portrait-lg">FOUNDER<br>PHOTO</div>
       <div>
         <div class="eyebrow">DZOFO</div>
@@ -42,36 +43,38 @@
     </div>
   </section>
 
+  <div class="sonar-divider" aria-hidden="true"></div>
+
   <section class="zone">
-    <div class="container">
+    <div class="container reveal">
       <h2>About</h2>
       <p><strong>You've discovered my sunken treasure.</strong><br>
       Dragged up from the ocean floor, this wreck belongs to <em>Our Fish Overlord (aka Ded Zed)</em>, a digital trickster and deep-sea meme machine. I float across the net, creating weird, chaotic, and questionably funny content because&hellip; why not? If it makes someone laugh, that's gold enough for me.</p>
       <p>Welcome aboard.</p>
 
       <div class="timeline">
-        <div class="entry">
+        <div class="entry reveal">
           <div class="eyebrow" style="margin-bottom:4px;">My time as a metal musician</div>
           <h3>Ded Zed</h3>
           <p>Under the alias Ded Zed, I channel distortion and disorder into a sonic punch that leaves a mark. This is for those who crave blast beats, grinding riffs, and vocals torn from the edge. No filters, no frills — just pure catharsis wrapped in metal.</p>
           <p>I started as a drummer for my old high school band, Parasitology, where the name Ded Zed originates. From there I evolved into making heavier music, which led me to producing my own material as Ded Zed.</p>
         </div>
 
-        <div class="entry">
+        <div class="entry reveal">
           <div class="eyebrow" style="margin-bottom:4px;">Flowing creativity</div>
           <h3>Our Fish Overlord</h3>
           <p>Known as Our Fish Overlord, I make music that's anything but typical for me — yet somehow it resonates. What started as an outlet for game soundtracks quickly evolved into something deeper: a space to explore emotion, identity, and the unexpected paths sound can take.</p>
           <p>This journey's just beginning. As I keep pushing boundaries and learning more about myself, the music will grow with me — shifting, expanding, and never standing still.</p>
         </div>
 
-        <div class="entry">
+        <div class="entry reveal">
           <div class="eyebrow" style="margin-bottom:4px;">Content creation</div>
           <h3>Since 2020, during the peak of the pandemic</h3>
           <p>I made the leap into full-time content creation on YouTube and Twitch. What started as casual gameplay quickly evolved — first into a deep dive through nostalgic classics, and now into immersive VR adventures.</p>
           <p>As a digital personality, gaming has always been my constant. Before, I'd sit in silence, lost in the experience. Now, sharing that joy with a community adds a whole new dimension. Every interaction opens doors to new connections, creative ideas, and unexpected possibilities. Where this has led me to&hellip;</p>
         </div>
 
-        <div class="entry">
+        <div class="entry reveal">
           <div class="eyebrow" style="margin-bottom:4px;">VR development</div>
           <h3>From platforms to personal vision</h3>
           <p>My development journey in VR began in 2022 with Meta Horizons, where I first dipped into world-building — designing social hubs, interactive spaces, and playful micro-experiences. It was my training ground for understanding user presence, avatar expression, and spatial storytelling in three dimensions.</p>
@@ -81,14 +84,22 @@
       </div>
 
       <div class="platform-links">
-        <a href="https://horizon.meta.com/profile/DedZedOffishial/?locale=en_GB" target="_blank" rel="noopener">Meta Horizon</a>
-        <a href="https://vrchat.com/home/user/usr_97d57b9e-27fa-4fce-a1ce-218edb215ad2" target="_blank" rel="noopener">VRChat</a>
+        <a href="https://horizon.meta.com/profile/DedZedOffishial/?locale=en_GB" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="#5EEAD4"><path d="M17 7H7a5 5 0 0 0 0 10h1.5a3 3 0 0 0 2.4-1.2l1.1-1.5 1.1 1.5A3 3 0 0 0 15.5 17H17a5 5 0 0 0 0-10Z" opacity="0.85"/></svg>
+          Meta Horizon
+        </a>
+        <a href="https://vrchat.com/home/user/usr_97d57b9e-27fa-4fce-a1ce-218edb215ad2" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="#5EEAD4"><path d="M4 5h4l4 10 4-10h4l-6 14h-4L4 5Z" opacity="0.85"/></svg>
+          VRChat
+        </a>
       </div>
     </div>
   </section>
 
+  <div class="sonar-divider" aria-hidden="true"></div>
+
   <section class="zone">
-    <div class="container">
+    <div class="container reveal">
       <h2>Get in touch</h2>
       <p>Have a question, a collab idea, or just want to say hi? Send a note below.</p>
       <!--
