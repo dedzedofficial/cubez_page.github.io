@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FISH HWB</title>
 <meta name="description" content="FISH HWB — content creators for YouTube, Twitch and several other corners of the internet, run by Ded &quot;Our Fish Overlord&quot; Zed.">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -33,67 +33,34 @@
 
   <!-- ===== SURFACE : hero ===== -->
   <section class="zone hero">
-    <div class="glow-orb glow-orb--teal" aria-hidden="true"></div>
-    <div class="glow-orb glow-orb--lure" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="hero-copy reveal">
-        <div class="eyebrow">Welcome to the fallen</div>
-        <h1>Content, dragged up<br>from the <em>deep end</em>.</h1>
-        <p class="tagline">FISH HWB is home to content creators making YouTube videos, VR worlds, and general chaos across the internet — led by Our Fish Overlord himself.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#live">Watch live</a>
-          <a class="btn btn-ghost" href="dzofo.html">Meet the founder</a>
-          <span class="live-badge"><span class="dot"></span>dedzedoffishal &middot; live on Twitch</span>
-        </div>
-      </div>
-      <div class="hero-figure reveal" aria-hidden="true">
-        <svg viewBox="0 0 320 260" fill="none">
-          <defs>
-            <radialGradient id="lureGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#5EEAD4" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#5EEAD4" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <!-- angler silhouette -->
-          <path d="M40 150c30-58 110-78 168-46 22 12 34 26 34 40s-12 28-34 40c-58 32-138 12-168-46z"
-                fill="none" stroke="#5EEAD4" stroke-opacity="0.55" stroke-width="2"/>
-          <path d="M40 150c10-20 26-36 46-46" stroke="#5EEAD4" stroke-opacity="0.3" stroke-width="1.4"/>
-          <circle cx="118" cy="128" r="2.6" fill="#5EEAD4"/>
-          <path d="M112 108c-10-22-2-40 8-46" stroke="#FF5A3C" stroke-opacity="0.6" stroke-width="2" fill="none"/>
-          <circle cx="120" cy="60" r="22" fill="url(#lureGlow)"/>
-          <circle cx="120" cy="60" r="5" fill="#FF5A3C"/>
-          <path d="M208 118c14 6 14 26 0 32" stroke="#5EEAD4" stroke-opacity="0.4" stroke-width="1.6" fill="none"/>
-        </svg>
+    <div class="container">
+      <div class="eyebrow">Welcome to the fallen</div>
+      <h1>Content, dragged up<br>from the <em>deep end</em>.</h1>
+      <p class="tagline">FISH HWB is home to content creators making YouTube videos, VR worlds, and general chaos across the internet — led by Our Fish Overlord himself.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#live">Watch live</a>
+        <a class="btn btn-ghost" href="dzofo.html">Meet the founder</a>
       </div>
     </div>
   </section>
 
-  <div class="sonar-divider" aria-hidden="true"></div>
-
   <!-- ===== TWILIGHT ZONE : founder + live embeds ===== -->
   <section class="zone" id="live">
     <div class="container">
-      <div class="eyebrow reveal">Twilight zone</div>
-      <a href="dzofo.html" style="text-decoration:none; display:block;" class="reveal">
+      <div class="eyebrow">Twilight zone</div>
+      <a href="dzofo.html" style="text-decoration:none;">
         <div class="founder-card">
           <div class="portrait">FOUNDER<br>PHOTO</div>
           <div>
             <h3>Ded &quot;Our Fish Overlord&quot; Zed</h3>
             <div class="role">Founder</div>
           </div>
-          <span class="go">Meet him &rarr;</span>
         </div>
       </a>
 
       <div class="embed-grid">
-        <div class="embed-card reveal">
-          <div class="embed-head">
-            <span class="name">
-              <svg viewBox="0 0 24 24" fill="#9146FF"><path d="M4 2 2 7v13h5v2h3l2-2h4l4-4V2H4zm16 13-3 3h-4l-2 2v-2H6V4h14v11z"/><path d="M15 7h2v5h-2zM10 7h2v5h-2z" fill="#9146FF"/></svg>
-              Twitch
-            </span>
-            <span>dedzedoffishal</span>
-          </div>
+        <div class="embed-card">
+          <div class="embed-head"><span>Twitch</span><span>dedzedoffishal</span></div>
           <iframe
             id="twitch-embed"
             src=""
@@ -101,14 +68,8 @@
             allowfullscreen>
           </iframe>
         </div>
-        <div class="embed-card reveal">
-          <div class="embed-head">
-            <span class="name">
-              <svg viewBox="0 0 24 24" fill="#5865F2"><path d="M20 4.4a18 18 0 0 0-4.4-1.4l-.3.6c1.5.4 2.9 1 4.1 1.7-2-.9-4-1.4-6-1.6-.5 0-1 0-1.4.1l-.2-.6a18 18 0 0 0-4.5 1.4C4.6 8 3.7 11.6 4 15.1c1.6 1.2 3.2 2 4.7 2.5l.6-1c-.8-.3-1.6-.7-2.3-1.2.2.1.4.3.6.4 2.9 1.4 6.1 1.4 9 0l.6-.4c-.7.5-1.5.9-2.3 1.2l.6 1c1.5-.5 3.1-1.3 4.7-2.5.4-4.2-.7-7.8-2.8-10.7ZM9.7 13.4c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Zm4.6 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Z"/></svg>
-              Discord
-            </span>
-            <span>Join the reef</span>
-          </div>
+        <div class="embed-card">
+          <div class="embed-head"><span>Discord</span><span>Join the reef</span></div>
           <iframe
             src="https://discord.com/widget?id=1186424320428363887&theme=dark"
             height="260"
@@ -120,15 +81,13 @@
     </div>
   </section>
 
-  <div class="sonar-divider" aria-hidden="true"></div>
-
   <!-- ===== MIDNIGHT ZONE : latest uploads ===== -->
   <section class="zone">
     <div class="container">
-      <div class="eyebrow reveal">Midnight zone</div>
-      <h2 class="reveal">Latest fishy content</h2>
+      <div class="eyebrow">Midnight zone</div>
+      <h2>Latest fishy content</h2>
       <div class="card-grid">
-        <div class="content-card reveal">
+        <div class="content-card">
           <div class="thumb">
             <!--
               Swap this iframe's src for your latest YouTube upload:
@@ -141,7 +100,7 @@
             <p>Replace this card with an embed of your newest video.</p>
           </div>
         </div>
-        <div class="content-card reveal">
+        <div class="content-card">
           <div class="thumb">
             <!--
               Swap this iframe's src for your latest Twitch clip:
